@@ -21,7 +21,7 @@ function Pelota(r) {
   this.inicial_y = this.y;
   this.vx = 0;
   this.vy = 0;
-  this.color = "#FF2A00";
+  this.color = "#00A5D1";
 }
 Pelota.prototype.dibujar = function() {
   // dibuja la pelota
