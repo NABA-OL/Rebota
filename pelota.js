@@ -42,7 +42,7 @@ Pelota.prototype.arrastrar = function(m) {
   this.x = m.x + dx;
   this.y = m.y + dy;
   
-  this.colisionParedes();
+  this.colision();
   // calcula la velocidad (vx y vy) de la pelota mientras la arrastramos
   this.vx = this.x - this.inicial_x;
   this.vy = this.y - this.inicial_y;
@@ -57,11 +57,11 @@ Pelota.prototype.lanzar = function(m) {
   this.x += this.vx;
   this.y += this.vy;
 
-  this.colisionParedes();
+  this.colision();
 
 }
 
-Pelota.prototype.colisionParedes = function() {
+Pelota.prototype.colision = function() {
   if (this.x > cw - this.r) {
     this.x = cw - this.r;
     this.vx *= rebote;
